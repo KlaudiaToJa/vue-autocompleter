@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Google</title>
+        <link rel="stylesheet" href="autocompleter.css">
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="cities.js"></script>
+        <script src="autocompleter.js"></script>
+    </head>
+
+    <!-- PRZYKLADOWE ZASTOSOWANIE KOMPONENTU V-AUTOCOMPLETER -->
+    <body>
+        <div id="app">
+            <v-autocompleter
+              :value="googleSearch"
+              @input="googleSearch = $event"
+              @enter="enter"
+            ></v-autocompleter>
+          </div>
+    </body>
+
+    <script type="text/javascript">
+      var app = new Vue({
+        el: "#app",
+        data: {
+          enterClicked: 0,
+          googleSearch: "",
+          cities: window.cities
+        },
+        methods: {
+          enter() {
+            console.log("ENTER!");
+            this.googleSearch = value;  
+          }
+        }
+      });
+    </script>
+
+</html>
