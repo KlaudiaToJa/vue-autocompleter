@@ -1,0 +1,42 @@
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: arial,sans-serif;
+    margin: 0;
+    padding-top: 100px;
+}
+
+pre, xmp {
+    background: #fcf2f9;
+    border: 1px solid rgb(255, 192, 250);
+    border-left: 3px solid #db6dff;
+    color: rgb(72, 36, 70);
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 40px 50px 20px 0;
+    display: block;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.opis{
+    padding-top: 60px;
+    max-width: 900px;
+}
+
+h1{
+    padding-bottom: 60px;
+}
+
+a{
+    word-wrap: break-word;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

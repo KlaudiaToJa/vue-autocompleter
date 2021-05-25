@@ -62,9 +62,8 @@ Vue.component("v-autocompleter", {
         if(this.isActive == 0)
         {
           this.isActive = 1;
-          this.value = a;
           this.kontrol = 0;
-          this.$emit('enter');
+          this.$emit('enter', this.isActive, a);
           document.activeElement.blur();
         }
       },
@@ -98,6 +97,9 @@ Vue.component("v-autocompleter", {
         this.value = this.filteredCities[index].name;
       }
     },
+    /**
+     * props pozwalają przekazać do autocompletera dane
+     */
     props: {
         value: {
           type: String,
@@ -110,7 +112,6 @@ Vue.component("v-autocompleter", {
       },
     template: `
     <div>
-
         <input 
             class="inp"
             type="search" 
